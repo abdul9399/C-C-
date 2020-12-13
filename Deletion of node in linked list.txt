@@ -1,0 +1,42 @@
+struct Node* deleteNode(struct Node* p,struct Node*p,int pos)
+{
+if(pos==1)
+{
+   struct Node* temp = p->next;
+   free(p);
+   return temp;
+}
+else
+{
+   int i=1;
+   while(i<pos)
+   {
+     q=p;
+     p=p->next;
+   }
+   q->next=p->next;
+   free(p);
+   return NULL;
+}
+-----------------------------------------------------------
+///////////////recursive approACH////////////////////
+------------------------------------------------------------
+
+struct Node* RdeleteNode(struct Node* p,struct Node*p,int pos)
+{
+if(pos==1)
+{
+   struct Node* temp = p->next;
+   free(p);
+   return temp;
+}
+else if(i<pos)
+{
+   RdeleteNode(p->next,p,i+1,pos);
+}
+else
+{
+   q->next=p->next;
+   free(p);
+   return NULL;
+}
